@@ -1,0 +1,26 @@
+
+
+.game-wrapper {
+    margin-top: 5%;
+        
+    .board-container {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+
+        .mat-grid-list {
+            .mat-grid-tile {
+                border: 2px solid #ccc;
+            }
+        }
+    }
+
+    .test {
+        position: absolute;
+        left: calc((10% - 0.9px + 5px) * 1);
+        width: calc((10% - 0.9px) * 1 + 0px);
+        margin-top: calc((5% - 7px + 1px) * 2);
+        padding-top: calc((5% - 7px) * 1 + 0px);
+    }
+
+}
