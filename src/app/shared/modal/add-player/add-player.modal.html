@@ -1,0 +1,21 @@
+
+<div mat-dialog-content>
+    <strong>Player Name</strong>
+    <mat-form-field>
+        <mat-label>Player Name</mat-label>
+        <input matInput
+        [(ngModel)]="player.name">
+    </mat-form-field>
+    <strong>Player Color</strong>
+    
+    <mat-form-field>
+        <input matInput [ngxMatColorPicker]="picker" [disabled]="disabled"
+        [(ngModel)]="colorModel">
+        <ngx-mat-color-toggle matSuffix [for]="picker"></ngx-mat-color-toggle>
+        <ngx-mat-color-picker #picker [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button cdkFocusInitial (click)="save()">Save</button>
+</div>
